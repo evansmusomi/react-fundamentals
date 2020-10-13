@@ -11,7 +11,11 @@
     const rootElement = document.getElementById('root')
     const element = React.createElement('div', {
       className: 'container',
-      children: 'Hello World',
+      children: [
+        React.createElement('span', {key: 'hello'}, 'Hello'),
+        ' ',
+        React.createElement('span', {key: 'world'}, 'World'),
+      ],
     })
     ReactDOM.render(element, rootElement)
   </script>
